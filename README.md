@@ -1,1 +1,1 @@
-# [Check it out!](https://liammulhall.com/)
+[Check it out!](https://liammulhall.com/)
