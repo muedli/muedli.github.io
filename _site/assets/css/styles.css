@@ -6,11 +6,13 @@ nav { color: var(--color); grid-area: nav; }
 
 body { background-color: var(--background-color); display: grid; font-family: Palatino, Palatino Linotype; grid-template-columns: 1fr; grid-template-rows: 0.1fr auto 0.1fr; grid-template-areas: "nav" "main" "footer"; height: 100vh; }
 
-main { color: var(--color); grid-area: main; margin-left: 14em; margin-right: 14em; margin-top: 2em; margin-bottom: 2em; }
+main { color: var(--color); grid-area: main; margin-left: 25%; margin-right: 25%; margin-top: 2em; margin-bottom: 2em; }
 
 footer { color: var(--color); background-color: var(--footer-color); grid-area: footer; padding: 1.2em; text-align: center; }
 
-h1 { color: var(--accent-color); font-weight: bold; }
+h1, h2, h3 { color: var(--accent-color); font-weight: bold; }
+
+h2 { margin-top: 1em; }
 
 a { color: var(--link-color); }
 

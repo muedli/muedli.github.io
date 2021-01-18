@@ -32,8 +32,8 @@ body {
 main {
   color: var(--color);
   grid-area: main;
-  margin-left: 14em;
-  margin-right: 14em;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -46,9 +46,13 @@ footer {
   text-align: center;
 }
 
-h1 {
+h1, h2, h3 {
   color: var(--accent-color);
   font-weight: bold;
+}
+
+h2 {
+  margin-top: 1em;
 }
 
 a {
