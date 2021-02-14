@@ -1,13 +1,17 @@
+/* Set variables. */
+
 :root {
   --border-radius: 6px;
   --border-style: solid;
   --padding: 0.4rem;
 }
 
+/* Set up grid. */
+
 #container {
   display: grid;
   height: 100vh;
-  grid-gap: 0.2rem;
+  grid-gap: 0.8rem;
   grid-template-areas:
     "header header header"
     "nav nav nav"
@@ -17,7 +21,10 @@
   grid-template-rows: auto;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 750px) {
+  #body {
+    color: pink;
+  }
   #container {
     grid-template-areas:
       "header"
@@ -30,6 +37,34 @@
     grid-template-rows: auto;
   }
 }
+
+/* Set grid areas. */
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#sidebarLeft {
+  grid-area: sidebarLeft;
+}
+
+#sidebarRight {
+  grid-area: sidebarRight;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Set custom styles. */
 
 @media (prefers-color-scheme: dark) {
   :root{
@@ -50,16 +85,20 @@
   text-align: center;
 }
 
+.content {
+  font-family: Palatino, serif;
+}
+
+.heading {
+  font-family: Optima, sans-serif;
+}
+
 .pad {
   padding: var(--padding);
 }
 
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
+#title {
+  text-align: center;
 }
 
 a:link, a:visited {
@@ -68,24 +107,4 @@ a:link, a:visited {
 
 a:active, a:hover {
   color: green;
-}
-
-#sidebarLeft {
-  grid-area: sidebarLeft;
-}
-
-#sidebarRight {
-  grid-area: sidebarRight;
-}
-
-main {
-  grid-area: main;
-}
-
-#title {
-  text-align: center;
-}
-
-footer {
-  grid-area: footer;
 }
