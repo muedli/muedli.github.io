@@ -1,3 +1,9 @@
+:root {
+  --border-radius: 6px;
+  --border-style: solid;
+  --padding: 0.4rem;
+}
+
 #container {
   display: grid;
   height: 100vh;
@@ -25,6 +31,18 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root{
+    background-color: black;
+    color: white;
+  }
+}
+
+.border {
+  border-style: var(--border-style);
+  border-radius: var(--border-radius);
+}
+
 .center-perfect {
   align-items: center;
   display: flex;
@@ -33,35 +51,33 @@
 }
 
 .pad {
-  padding: 0.4rem;
+  padding: var(--padding);
 }
 
 header {
-  background-color: red;
   grid-area: header;
 }
 
 nav {
-  background-color: orange;
   grid-area: nav;
 }
 
 #sidebarLeft {
-  background-color: yellow;
   grid-area: sidebarLeft;
 }
 
 #sidebarRight {
-  background-color: green;
   grid-area: sidebarRight;
 }
 
 main {
-  background-color: blue;
   grid-area: main;
 }
 
+#title {
+  text-align: center;
+}
+
 footer {
-  background-color: indigo;
   grid-area: footer;
 }
