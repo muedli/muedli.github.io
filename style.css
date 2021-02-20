@@ -22,9 +22,6 @@
 }
 
 @media only screen and (max-width: 750px) {
-  #body {
-    color: pink;
-  }
   #container {
     grid-template-areas:
       "header"
@@ -102,9 +99,10 @@ footer {
 }
 
 a:link, a:visited {
-  color: blue;
+  color: cyan;
 }
 
 a:active, a:hover {
-  color: green;
+  color: lime;
+  transition: 0.4s;
 }
