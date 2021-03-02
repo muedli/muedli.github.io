@@ -1,0 +1,3 @@
+* Personal Website
+
+Trying to keep it minimal with HTML and CSS from scratch.

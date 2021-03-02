@@ -1,0 +1,59 @@
+/* Custom styles. */
+
+a:link, a:visited {
+    color: #ff00ff;
+}
+
+a:active, a:hover {
+    color: #33cc33;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center-perfect {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.content {
+    font-family: Palatino, serif;
+}
+
+.heading {
+    font-family: Optima, sans-serif;
+}
+
+.liam {
+    border-radius: 50%;
+    height: auto;
+    max-width: 30%;
+}
+
+/* Media queries. */
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        background-color: #1a1a1a;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        margin: 2%;
+    }
+}
