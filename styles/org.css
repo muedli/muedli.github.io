@@ -1,0 +1,41 @@
+/* Custom styles. */
+
+a:link, a:visited {
+    color: #ff00ff;
+}
+
+a:active, a:hover {
+    color: #33cc33;
+}
+
+body {
+    font-family: Palatino, serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Optima, sans-serif;
+}
+
+/* Media queries. */
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        background-color: #1a1a1a;
+        color: white;
+    }
+    pre.src:before {
+        background-color: #1a1a1a;
+        border: 1px solid white;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        margin: 2%;
+    }
+}

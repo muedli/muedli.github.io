@@ -1,0 +1,15 @@
+#+HTML_HEAD: <link href="../styles/org.css" rel="stylesheet">
+#+TITLE: A Brief Introduction To Literate Programming With Geometrical Examples
+* Hello, World!
+** Here's some stuff.
+Lots of text. Not really.
+#+BEGIN_SRC cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Hello, World!" << endl;
+  return 0;
+}
+#+END_SRC
