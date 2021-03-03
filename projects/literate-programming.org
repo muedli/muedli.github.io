@@ -70,12 +70,12 @@ opinion, crucial elements of learning.
 Teaching programming can be especially useful for teaching and illustrating
 mathematical concepts. Indeed, a computer is basically a mathematical sandbox.
 
-* A Few Examples Of Literate Programming
-
-OK, that first example was pretty boring. Thanks to the wonderful world of
-JavaScript libraries, we can have more interesting examples.
+* Two Examples Of Literate Programming
 
 ** Make A Spinning Cube Using Three.js
+
+OK, that first example was pretty boring. Thanks to the wonderful world of
+JavaScript libraries, we have a more interesting example.
 
 To make a spinning cube using the Three.js JavaScript library, we first make a
 DOM element where the spinning cube will live and we include the Three.js
@@ -170,13 +170,15 @@ computing.
 
 [[https://colab.research.google.com/drive/1YUYT90gJIZ09V0YqueZnsBj2yGdYIXp0?usp=sharing][Let's check it out!]]
 
+* Other Tools For Literate Programming
+
 ** Honorable Mentions
 
 + [[https://jupyter.org/][Jupyter Notebook]]
 + [[https://rmarkdown.rstudio.com/][R Markdown]]
 + [[https://www.wolfram.com/notebooks/][Wolfram Notebooks]]
 
-* How did you make this webpage?
+** How did you make this webpage?
 
 I made it with [[https://orgmode.org/][Emacs Org-mode]].
 
