@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-02 Tue 14:40 -->
+<!-- 2021-03-02 Tue 22:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Brief Introduction To Literate Programming With Geometrical Examples</title>
@@ -216,6 +216,28 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -224,42 +246,273 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6866f1a">1. Hello, World!</a>
+<li><a href="#orgff1fab8">What is literate programming?</a>
 <ul>
-<li><a href="#org5ab356f">1.1. Here&rsquo;s some stuff.</a></li>
+<li><a href="#orgcacf0a3">A Simple Example</a></li>
+<li><a href="#org5f57e26">History of Literate Programming</a></li>
+<li><a href="#orgf2db112">Why should I care?</a></li>
+<li><a href="#org186cecf">Are there any other ways that literate programming could be used?</a></li>
 </ul>
 </li>
+<li><a href="#orgbc15224">A Few Examples Of Literate Programming</a>
+<ul>
+<li><a href="#org9bdabc5">Make A Spinning Cube Using Three.js</a></li>
+<li><a href="#org058c58b">Google Colab</a></li>
+<li><a href="#org76e7458">Honorable Mentions</a></li>
+</ul>
+</li>
+<li><a href="#org0b3d38e">How did you make this webpage?</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6866f1a" class="outline-2">
-<h2 id="org6866f1a"><span class="section-number-2">1</span> Hello, World!</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org5ab356f" class="outline-3">
-<h3 id="org5ab356f"><span class="section-number-3">1.1</span> Here&rsquo;s some stuff.</h3>
-<div class="outline-text-3" id="text-1-1">
+
+<div id="outline-container-orgff1fab8" class="outline-2">
+<h2 id="orgff1fab8">What is literate programming?</h2>
+<div class="outline-text-2" id="text-orgff1fab8">
 <p>
-Lots of text. Not really.
+Literate programming sounds fancy, but it&rsquo;s really just an explanation of a
+program along with the source code for the program. Some of the fancier tools
+for literate programming allow you to run the source code right then and there.
+They also let you manipulate the source code. We&rsquo;ll see this fanciness when we
+look at Google Colab later.
 </p>
+</div>
+
+<div id="outline-container-orgcacf0a3" class="outline-3">
+<h3 id="orgcacf0a3">A Simple Example</h3>
+<div class="outline-text-3" id="text-orgcacf0a3">
+<p>
+The following is simple C++ program that prints the number of edges of a cube.
+It uses <a href="https://en.wikipedia.org/wiki/Euler_characteristic#Polyhedra">Euler&rsquo;s polyhedron formula</a> \( V - E + F = 2. \) The \( V \) denotes the
+number of vertices, the \( E \) denotes the number of edges, and the \( F \)
+denotes the number of faces of a convex polyhedron.
+</p>
+
+
+<div id="orga696187" class="figure">
+<p><img src="../images/vertex-edge-face.png" alt="vertex-edge-face.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>An explanation of vertices, edges, and faces taken from Wikipedia.</p>
+</div>
+
 <div class="org-src-container">
 <pre class="src src-cpp"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">&lt;iostream&gt;</span>
 
-<span style="color: #51afef;">using</span> <span style="color: #51afef;">namespace</span> <span style="color: #a9a1e1;">std</span>;
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">getNumberOfEdges</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">vertices</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">faces</span>) {
+    <span style="color: #51afef;">return</span> vertices + faces - <span style="color: #da8548; font-weight: bold;">2</span>;
+}
 
 <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>() {
-  cout &lt;&lt; <span style="color: #98be65;">"Hello, World!"</span> &lt;&lt; endl;
-  <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">edgesOfCube</span> = getNumberOfEdges(<span style="color: #da8548; font-weight: bold;">6</span>, <span style="color: #da8548; font-weight: bold;">8</span>);
+    <span style="color: #a9a1e1;">std</span>::cout &lt;&lt; edgesOfCube &lt;&lt; <span style="color: #a9a1e1;">std</span>::endl;
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
 }
 </pre>
 </div>
 </div>
 </div>
+
+<div id="outline-container-org5f57e26" class="outline-3">
+<h3 id="org5f57e26">History of Literate Programming</h3>
+<div class="outline-text-3" id="text-org5f57e26">
+<p>
+According to Wikipedia, literate programming was &ldquo;introduced&rdquo; by <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>.
+</p>
+
+
+<div id="orga16a49e" class="figure">
+<p><img src="../images/donald-knuth.jpg" alt="donald-knuth.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>A picture of Donald Knuth taken from Wikipedia. Licensed under CC BY-SA 2.5.</p>
+</div>
+
+<p>
+Knuth is one of the most famous computer scientists in the world. He made \(
+\TeX \) and invented big O notation. He literally wrote the book on literate
+programming!
+</p>
+
+
+<div id="orgad18ede" class="figure">
+<p><img src="../images/literate-programming-book.jpg" alt="literate-programming-book.jpg" />
+</p>
+<p><span class="figure-number">Figure 3: </span>A picture of Knuth&rsquo;s book on literate programming.</p>
 </div>
 </div>
-<div id="postamble" class="status">
-<p class="author">Author: Liam Edward Mulhall</p>
-<p class="date">Created: 2021-03-02 Tue 14:40</p>
+</div>
+
+<div id="outline-container-orgf2db112" class="outline-3">
+<h3 id="orgf2db112">Why should I care?</h3>
+<div class="outline-text-3" id="text-orgf2db112">
+<p>
+Literate programming is often used in academia for reproducible research. You
+can explain what your program does and your colleagues can test the program for
+themselves. It&rsquo;s also very useful for creating tutorials.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org186cecf" class="outline-3">
+<h3 id="org186cecf">Are there any other ways that literate programming could be used?</h3>
+<div class="outline-text-3" id="text-org186cecf">
+<p>
+Yes! I think it should be used in teaching. A creative teacher could use
+literate programming to teach just about any subject. If properly introduced,
+programming is very conducive to experimentation and play which are, in my
+opinion, crucial elements of learning.
+</p>
+
+<p>
+Teaching programming can be especially useful for teaching and illustrating
+mathematical concepts. Indeed, a computer is basically a mathematical sandbox.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc15224" class="outline-2">
+<h2 id="orgbc15224">A Few Examples Of Literate Programming</h2>
+<div class="outline-text-2" id="text-orgbc15224">
+<p>
+OK, that first example was pretty boring. Thanks to the wonderful world of
+JavaScript libraries, we can have more interesting examples.
+</p>
+</div>
+
+<div id="outline-container-org9bdabc5" class="outline-3">
+<h3 id="org9bdabc5">Make A Spinning Cube Using Three.js</h3>
+<div class="outline-text-3" id="text-org9bdabc5">
+<p>
+To make a spinning cube using the Three.js JavaScript library, we first make a
+DOM element where the spinning cube will live and we include the Three.js
+library.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"cubeCanvas"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"center-perfect"</span>&gt;&lt;/<span style="color: #c678dd;">div</span>&gt;
+&lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"https://threejs.org/build/three.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
+</pre>
+</div>
+
+<p>
+We then use the Three.js library to create a cute little spinning cube.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #5B6268;">// </span><span style="color: #5B6268;">Create scene and camera.</span>
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">scene</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.Scene</span>();
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">camera</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.PerspectiveCamera</span>( <span style="color: #da8548; font-weight: bold;">75</span>, window.innerWidth / window.innerHeight, <span style="color: #da8548; font-weight: bold;">0.1</span>, <span style="color: #da8548; font-weight: bold;">1000</span> );
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">Create the renderer and set its size.</span>
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">renderer</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.WebGLRenderer</span>();
+renderer.setSize( window.innerWidth / <span style="color: #da8548; font-weight: bold;">2</span>, window.innerHeight / <span style="color: #da8548; font-weight: bold;">2</span> );
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">Create our cube and add it to the scene.</span>
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">geometry</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.BoxGeometry</span>( <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">1</span> );
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">material</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.MeshBasicMaterial</span>( { color: 0x00ff00 } );
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">cube</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">THREE.Mesh</span>( geometry, material );
+scene.add( cube );
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">Set the camera's position.</span>
+camera.position.z = <span style="color: #da8548; font-weight: bold;">5</span>;
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">Animate the cube.</span>
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">animate</span> = () =&gt; {
+    requestAnimationFrame( animate );
+    cube.rotation.x += <span style="color: #da8548; font-weight: bold;">0.01</span>;
+    cube.rotation.y += <span style="color: #da8548; font-weight: bold;">0.01</span>;
+    renderer.render( scene, camera );
+};
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">Get the cube's canvas, add the renderer to it, and animate the cube.</span>
+window.addEventListener(<span style="color: #98be65;">'DOMContentLoaded'</span>, () =&gt; {
+    <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">cubeCanvas</span> = document.getElementById(<span style="color: #98be65;">'cubeCanvas'</span>);
+    cubeCanvas.appendChild( renderer.domElement );
+    animate();
+});
+</pre>
+</div>
+
+<p>
+Look! A green spinning cube!
+</p>
+
+<div id="cubeCanvas" class="center-perfect"></div>
+<script src="https://threejs.org/build/three.js"></script>
+<script>
+// Create scene and camera.
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+// Create the renderer and set its size.
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth / 2, window.innerHeight / 2 );
+//document.body.appendChild( renderer.domElement );
+
+// Create our cube and add it to the scene.
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+// Set the camera's position.
+camera.position.z = 5;
+
+// Animate the cube.
+const animate = () => {
+    requestAnimationFrame( animate );
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render( scene, camera );
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+    const cubeCanvas = document.getElementById('cubeCanvas');
+    cubeCanvas.appendChild( renderer.domElement );
+    animate();
+});
+</script>
+</div>
+</div>
+
+<div id="outline-container-org058c58b" class="outline-3">
+<h3 id="org058c58b">Google Colab</h3>
+<div class="outline-text-3" id="text-org058c58b">
+<p>
+Google Colab is a popular literate programming tool for Python. Python is a very
+popular programming language for data science, machine learning, and scientific
+computing.
+</p>
+
+<p>
+<a href="https://colab.research.google.com/drive/1YUYT90gJIZ09V0YqueZnsBj2yGdYIXp0?usp=sharing">Let&rsquo;s check it out!</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76e7458" class="outline-3">
+<h3 id="org76e7458">Honorable Mentions</h3>
+<div class="outline-text-3" id="text-org76e7458">
+<ul class="org-ul">
+<li><a href="https://jupyter.org/">Jupyter Notebook</a></li>
+<li><a href="https://rmarkdown.rstudio.com/">R Markdown</a></li>
+<li><a href="https://www.wolfram.com/notebooks/">Wolfram Notebooks</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0b3d38e" class="outline-2">
+<h2 id="org0b3d38e">How did you make this webpage?</h2>
+<div class="outline-text-2" id="text-org0b3d38e">
+<p>
+I made it with <a href="https://orgmode.org/">Emacs Org-mode</a>.
+</p>
+
+<hr>
+<a class="center-perfect" href="https://liammulhall.com">Back To Liam's Homepage</a>
+</div>
+</div>
 </div>
 </body>
 </html>

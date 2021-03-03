@@ -8,6 +8,13 @@ a:active, a:hover {
     color: #33cc33;
 }
 
+.center-perfect {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 body {
     font-family: Palatino, serif;
     margin-top: 5%;
