@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-02 Tue 23:05 -->
+<!-- 2021-03-02 Tue 23:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Brief Introduction To Literate Programming With Geometrical Examples</title>
@@ -246,33 +246,33 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org339c726">What is literate programming?</a>
+<li><a href="#org8c828a7">What is literate programming?</a>
 <ul>
-<li><a href="#org5dfc530">A Simple Example</a></li>
-<li><a href="#org6c74327">History of Literate Programming</a></li>
-<li><a href="#org55d7e74">Why should I care?</a></li>
-<li><a href="#orgbbe571c">Are there any other ways that literate programming could be used?</a></li>
+<li><a href="#org178903f">A Simple Example</a></li>
+<li><a href="#org693e120">History of Literate Programming</a></li>
+<li><a href="#orge4fedf2">Why should I care?</a></li>
+<li><a href="#org4edf2dd">Are there any other ways that literate programming could be used?</a></li>
 </ul>
 </li>
-<li><a href="#orgb9f441b">Two Examples Of Literate Programming</a>
+<li><a href="#org082af3f">Two Examples Of Literate Programming</a>
 <ul>
-<li><a href="#org06a33bf">Make A Spinning Cube Using Three.js</a></li>
-<li><a href="#orgf699f88">Google Colab</a></li>
+<li><a href="#orgcbbf40e">Make A Spinning Cube Using Three.js</a></li>
+<li><a href="#org8f2c167">Google Colab</a></li>
 </ul>
 </li>
-<li><a href="#org615d77b">Other Tools For Literate Programming</a>
+<li><a href="#org1e0a8ae">Other Tools For Literate Programming</a>
 <ul>
-<li><a href="#orgeab0d21">Honorable Mentions</a></li>
-<li><a href="#org297fda8">How did you make this webpage?</a></li>
+<li><a href="#org60a8d3a">Honorable Mentions</a></li>
+<li><a href="#org01683ab">How did you make this webpage?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org339c726" class="outline-2">
-<h2 id="org339c726">What is literate programming?</h2>
-<div class="outline-text-2" id="text-org339c726">
+<div id="outline-container-org8c828a7" class="outline-2">
+<h2 id="org8c828a7">What is literate programming?</h2>
+<div class="outline-text-2" id="text-org8c828a7">
 <p>
 Literate programming sounds fancy, but it&rsquo;s really just an explanation of a
 program along with the source code for the program. Some of the fancier tools
@@ -282,9 +282,9 @@ look at Google Colab later.
 </p>
 </div>
 
-<div id="outline-container-org5dfc530" class="outline-3">
-<h3 id="org5dfc530">A Simple Example</h3>
-<div class="outline-text-3" id="text-org5dfc530">
+<div id="outline-container-org178903f" class="outline-3">
+<h3 id="org178903f">A Simple Example</h3>
+<div class="outline-text-3" id="text-org178903f">
 <p>
 The following is simple C++ program that prints the number of edges of a cube.
 It uses <a href="https://en.wikipedia.org/wiki/Euler_characteristic#Polyhedra">Euler&rsquo;s polyhedron formula</a> \( V - E + F = 2. \) The \( V \) denotes the
@@ -293,7 +293,7 @@ denotes the number of faces of a convex polyhedron.
 </p>
 
 
-<div id="orgfdcff0e" class="figure">
+<div id="orgbdc75ab" class="figure">
 <p><img src="../images/vertex-edge-face.png" alt="vertex-edge-face.png" />
 </p>
 <p><span class="figure-number">Figure 1: </span>An explanation of vertices, edges, and faces taken from Wikipedia.</p>
@@ -316,15 +316,15 @@ denotes the number of faces of a convex polyhedron.
 </div>
 </div>
 
-<div id="outline-container-org6c74327" class="outline-3">
-<h3 id="org6c74327">History of Literate Programming</h3>
-<div class="outline-text-3" id="text-org6c74327">
+<div id="outline-container-org693e120" class="outline-3">
+<h3 id="org693e120">History of Literate Programming</h3>
+<div class="outline-text-3" id="text-org693e120">
 <p>
 According to Wikipedia, literate programming was &ldquo;introduced&rdquo; by <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>.
 </p>
 
 
-<div id="orgc37c10c" class="figure">
+<div id="orgefb2916" class="figure">
 <p><img src="../images/donald-knuth.jpg" alt="donald-knuth.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>A picture of Donald Knuth taken from Wikipedia. Licensed under CC BY-SA 2.5.</p>
@@ -337,7 +337,7 @@ programming!
 </p>
 
 
-<div id="orgb6f9843" class="figure">
+<div id="org711a9fc" class="figure">
 <p><img src="../images/literate-programming-book.jpg" alt="literate-programming-book.jpg" />
 </p>
 <p><span class="figure-number">Figure 3: </span>A picture of Knuth&rsquo;s book on literate programming.</p>
@@ -345,9 +345,9 @@ programming!
 </div>
 </div>
 
-<div id="outline-container-org55d7e74" class="outline-3">
-<h3 id="org55d7e74">Why should I care?</h3>
-<div class="outline-text-3" id="text-org55d7e74">
+<div id="outline-container-orge4fedf2" class="outline-3">
+<h3 id="orge4fedf2">Why should I care?</h3>
+<div class="outline-text-3" id="text-orge4fedf2">
 <p>
 Literate programming is often used in academia for reproducible research. You
 can explain what your program does and your colleagues can test the program for
@@ -356,9 +356,9 @@ themselves. It&rsquo;s also very useful for creating tutorials.
 </div>
 </div>
 
-<div id="outline-container-orgbbe571c" class="outline-3">
-<h3 id="orgbbe571c">Are there any other ways that literate programming could be used?</h3>
-<div class="outline-text-3" id="text-orgbbe571c">
+<div id="outline-container-org4edf2dd" class="outline-3">
+<h3 id="org4edf2dd">Are there any other ways that literate programming could be used?</h3>
+<div class="outline-text-3" id="text-org4edf2dd">
 <p>
 Yes! I think it should be used in teaching. A creative teacher could use
 literate programming to teach just about any subject. If properly introduced,
@@ -367,16 +367,16 @@ opinion, crucial elements of learning.
 </p>
 
 <p>
-Teaching programming can be especially useful for teaching and illustrating
-mathematical concepts. Indeed, a computer is basically a mathematical sandbox.
+Programming can be especially useful for teaching and illustrating mathematical
+concepts. Indeed, a computer is basically a mathematical sandbox.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb9f441b" class="outline-2">
-<h2 id="orgb9f441b">Two Examples Of Literate Programming</h2>
-<div class="outline-text-2" id="text-orgb9f441b">
+<div id="outline-container-org082af3f" class="outline-2">
+<h2 id="org082af3f">Two Examples Of Literate Programming</h2>
+<div class="outline-text-2" id="text-org082af3f">
 <p>
 OK, that first example was pretty boring. Thanks to the folks who made the
 <a href="https://threejs.org/">Three.js</a> JavaScript library, and the folks at Google, we have two examples of
@@ -384,9 +384,9 @@ literate programming that are a bit more interesting.
 </p>
 </div>
 
-<div id="outline-container-org06a33bf" class="outline-3">
-<h3 id="org06a33bf">Make A Spinning Cube Using Three.js</h3>
-<div class="outline-text-3" id="text-org06a33bf">
+<div id="outline-container-orgcbbf40e" class="outline-3">
+<h3 id="orgcbbf40e">Make A Spinning Cube Using Three.js</h3>
+<div class="outline-text-3" id="text-orgcbbf40e">
 <p>
 To make a spinning cube using the Three.js JavaScript library, we first make a
 DOM element where the spinning cube will live and we include the Three.js
@@ -480,9 +480,9 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 
-<div id="outline-container-orgf699f88" class="outline-3">
-<h3 id="orgf699f88">Google Colab</h3>
-<div class="outline-text-3" id="text-orgf699f88">
+<div id="outline-container-org8f2c167" class="outline-3">
+<h3 id="org8f2c167">Google Colab</h3>
+<div class="outline-text-3" id="text-org8f2c167">
 <p>
 Google Colab is a popular literate programming tool for Python. Python is a very
 popular programming language for data science, machine learning, and scientific
@@ -496,18 +496,18 @@ computing.
 </div>
 </div>
 
-<div id="outline-container-org615d77b" class="outline-2">
-<h2 id="org615d77b">Other Tools For Literate Programming</h2>
-<div class="outline-text-2" id="text-org615d77b">
+<div id="outline-container-org1e0a8ae" class="outline-2">
+<h2 id="org1e0a8ae">Other Tools For Literate Programming</h2>
+<div class="outline-text-2" id="text-org1e0a8ae">
 <p>
 There are tons of other tools for literate programming, but I&rsquo;ll just mention a
 few that I&rsquo;m familiar with.
 </p>
 </div>
 
-<div id="outline-container-orgeab0d21" class="outline-3">
-<h3 id="orgeab0d21">Honorable Mentions</h3>
-<div class="outline-text-3" id="text-orgeab0d21">
+<div id="outline-container-org60a8d3a" class="outline-3">
+<h3 id="org60a8d3a">Honorable Mentions</h3>
+<div class="outline-text-3" id="text-org60a8d3a">
 <ul class="org-ul">
 <li><a href="https://jupyter.org/">Jupyter Notebook</a></li>
 <li><a href="https://rmarkdown.rstudio.com/">R Markdown</a></li>
@@ -516,9 +516,9 @@ few that I&rsquo;m familiar with.
 </div>
 </div>
 
-<div id="outline-container-org297fda8" class="outline-3">
-<h3 id="org297fda8">How did you make this webpage?</h3>
-<div class="outline-text-3" id="text-org297fda8">
+<div id="outline-container-org01683ab" class="outline-3">
+<h3 id="org01683ab">How did you make this webpage?</h3>
+<div class="outline-text-3" id="text-org01683ab">
 <p>
 I made it with <a href="https://orgmode.org/">Emacs Org-mode</a>.
 </p>

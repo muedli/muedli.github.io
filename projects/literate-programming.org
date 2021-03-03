@@ -67,8 +67,8 @@ literate programming to teach just about any subject. If properly introduced,
 programming is very conducive to experimentation and play which are, in my
 opinion, crucial elements of learning.
 
-Teaching programming can be especially useful for teaching and illustrating
-mathematical concepts. Indeed, a computer is basically a mathematical sandbox.
+Programming can be especially useful for teaching and illustrating mathematical
+concepts. Indeed, a computer is basically a mathematical sandbox.
 
 * Two Examples Of Literate Programming
 
