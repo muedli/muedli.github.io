@@ -23,7 +23,7 @@ a:active, a:hover {
 }
 
 .container {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
     margin-left: 20%;
     margin-right: 20%;
@@ -54,6 +54,9 @@ a:active, a:hover {
 
 @media only screen and (max-width: 750px) {
     .container {
-        margin: 2%;
+        margin-top: 20%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
