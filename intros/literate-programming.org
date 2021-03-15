@@ -23,7 +23,7 @@ a cube. (A cube has 8 vertices, 12 edges, and 6 faces.)
 
 Euler's Polyhedron Formula is \( V - E + F = 2. \) The \( V \) denotes the
 number of vertices, the \( E \) denotes the number of edges, and the \( F \)
-denotes the number of faces of a convex ployhedron. In the following program we
+denotes the number of faces of a convex polyhedron. In the following program we
 rearrange Euler's Polyhedron Formula to solve for \( E. \) The top function
 returns \( E = V + F - 2. \) The bottom function calls the top function with \(
 8 \) and \( 6 \) as parameters.
