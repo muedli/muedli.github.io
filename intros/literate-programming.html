@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-14 Sun 21:31 -->
+<!-- 2021-03-14 Sun 22:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Brief Intro to Literate Programming</title>
@@ -246,16 +246,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc747bc2">What is literate programming?</a></li>
-<li><a href="#orga430484">Example</a></li>
-<li><a href="#org4af672b">My Favorite Tools for Literate Programming</a></li>
+<li><a href="#org7016b98">What is literate programming?</a></li>
+<li><a href="#org67907cf">Example</a></li>
+<li><a href="#org92adb52">My Favorite Tools for Literate Programming</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc747bc2" class="outline-2">
-<h2 id="orgc747bc2">What is literate programming?</h2>
-<div class="outline-text-2" id="text-orgc747bc2">
+<div id="outline-container-org7016b98" class="outline-2">
+<h2 id="org7016b98">What is literate programming?</h2>
+<div class="outline-text-2" id="text-org7016b98">
 <p>
 Literate programming is a way to make computer programs more easily digestible.
 What does that mean? It means that a literate program includes source code as
@@ -269,16 +269,16 @@ easier to show than to tell.
 </div>
 </div>
 
-<div id="outline-container-orga430484" class="outline-2">
-<h2 id="orga430484">Example</h2>
-<div class="outline-text-2" id="text-orga430484">
+<div id="outline-container-org67907cf" class="outline-2">
+<h2 id="org67907cf">Example</h2>
+<div class="outline-text-2" id="text-org67907cf">
 <p>
 In this example, we use <a href="https://en.wikipedia.org/wiki/Euler_characteristic">Euler&rsquo;s Polyhedron Formula</a> to get the number of edges of
 a cube. (A cube has 8 vertices, 12 edges, and 6 faces.)
 </p>
 
 
-<div id="orgfc0a5e1" class="figure">
+<div id="org5087e28" class="figure">
 <p><img src="../images/cube.jpeg" alt="cube.jpeg" />
 </p>
 </div>
@@ -286,10 +286,10 @@ a cube. (A cube has 8 vertices, 12 edges, and 6 faces.)
 <p>
 Euler&rsquo;s Polyhedron Formula is \( V - E + F = 2. \) The \( V \) denotes the
 number of vertices, the \( E \) denotes the number of edges, and the \( F \)
-denotes the number of faces of a convex ployhedron. In the following program we
+denotes the number of faces of a convex polyhedron. In the following program we
 rearrange Euler&rsquo;s Polyhedron Formula to solve for \( E. \) The top function
 returns \( E = V + F - 2. \) The bottom function calls the top function with \(
-6 \) and \( 8 \) as parameters.
+8 \) and \( 6 \) as parameters.
 </p>
 
 <div class="org-src-container">
@@ -309,9 +309,9 @@ returns \( E = V + F - 2. \) The bottom function calls the top function with \(
 </div>
 </div>
 
-<div id="outline-container-org4af672b" class="outline-2">
-<h2 id="org4af672b">My Favorite Tools for Literate Programming</h2>
-<div class="outline-text-2" id="text-org4af672b">
+<div id="outline-container-org92adb52" class="outline-2">
+<h2 id="org92adb52">My Favorite Tools for Literate Programming</h2>
+<div class="outline-text-2" id="text-org92adb52">
 <p>
 There are many tools for literate programming. Two of my favorites are <a href="https://orgmode.org/">Emacs
 Org-mode</a> and <a href="https://rmarkdown.rstudio.com/">R Markdown</a>. I actually made this webpage using Org-mode. It&rsquo;s
