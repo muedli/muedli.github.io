@@ -1,0 +1,61 @@
+#+HTML_HEAD: <link href="../styles/org.css" rel="stylesheet">
+#+OPTIONS: html-postamble:nil num:nil
+#+TITLE: A Brief Intro to Literate Programming
+
+* What is literate programming?
+
+Literate programming is a way to make computer programs more easily digestible.
+What does that mean? It means that a literate program includes source code as
+well as a natural language explanation of the source code. At this point you
+might be wondering if a literate program is just a program with lots of
+comments. It's not. In a literate program, you might also have links, images,
+nicely rendered mathematical formulas, and so on. Tools for literate programming
+should make it easy to fiddle with the source code and execute it. It might be
+easier to show than to tell.
+
+* Example
+
+In this example, we use [[https://en.wikipedia.org/wiki/Euler_characteristic][Euler's Polyhedron Formula]] to get the number of edges of
+a cube. (A cube has 8 vertices, 12 edges, and 6 faces.)
+
+#+NAME: A cube with its vertices, edges, and faces labeled.
+[[file:../images/cube.jpeg]]
+
+Euler's Polyhedron Formula is \( V - E + F = 2. \) The \( V \) denotes the
+number of vertices, the \( E \) denotes the number of edges, and the \( F \)
+denotes the number of faces of a convex ployhedron. In the following program we
+rearrange Euler's Polyhedron Formula to solve for \( E. \) The top function
+returns \( E = V + F - 2. \) The bottom function calls the top function with \(
+8 \) and \( 6 \) as parameters.
+
+#+BEGIN_SRC cpp
+#include <iostream>
+
+int getNumberOfEdges(int vertices, int faces) {
+    return vertices + faces - 2;
+}
+
+int main() {
+    int edgesOfCube = getNumberOfEdges(8, 6);
+    std::cout << edgesOfCube << std::endl;
+    return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+: 12
+
+* My Favorite Tools for Literate Programming
+
+There are many tools for literate programming. Two of my favorites are [[https://orgmode.org/][Emacs
+Org-mode]] and [[https://rmarkdown.rstudio.com/][R Markdown]]. I actually made this webpage using Org-mode. It's
+powerful. I haven't scratched its surface. As of this writing, it supports 42
+programming languages. R Markdown only works with R, Python, and SQL as of this
+writing, but it has some neat export options.
+
+#+BEGIN_EXPORT html
+<hr>
+<footer>
+<a href="../index.html" class="center-perfect">Liam's Homepage</a>
+</footer>
+#+END_EXPORT

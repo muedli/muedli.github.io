@@ -8,6 +8,13 @@ a:active, a:hover {
     color: #33cc33;
 }
 
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .center-perfect {
     align-items: center;
     display: flex;
@@ -15,8 +22,20 @@ a:active, a:hover {
     text-align: center;
 }
 
+.liam {
+    border-radius: 50%;
+    height: auto;
+    max-width: 30%;
+}
+
+.org-src-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 body {
-    font-family: Palatino, serif;
+    font-family: Optima, sans-serif;
+    font-size: 20px;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 20%;
@@ -24,7 +43,25 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Optima, sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 70%;
+}
+
+hr {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* Media queries. */
@@ -43,6 +80,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (max-width: 750px) {
     body {
-        margin: 2%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    img {
+        width: 100%;
     }
 }

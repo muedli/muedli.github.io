@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-14 Sun 21:43 -->
+<!-- 2021-03-14 Sun 21:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Liam&rsquo;s Homepage</title>
+<title>A Brief Intro to Literate Programming</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Liam Edward Mulhall" />
 <style type="text/css">
@@ -193,7 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link href="./styles/org.css" rel="stylesheet">
+<link href="../styles/org.css" rel="stylesheet">
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -216,23 +216,114 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<img class="center-image liam" src="./images/liam.png" alt="Photo of Liam.">
+<h1 class="title">A Brief Intro to Literate Programming</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc747bc2">What is literate programming?</a></li>
+<li><a href="#orga430484">Example</a></li>
+<li><a href="#org4af672b">My Favorite Tools for Literate Programming</a></li>
+</ul>
+</div>
+</div>
 
-<h1 class="center-perfect">Hello.</h1>
+<div id="outline-container-orgc747bc2" class="outline-2">
+<h2 id="orgc747bc2">What is literate programming?</h2>
+<div class="outline-text-2" id="text-orgc747bc2">
+<p>
+Literate programming is a way to make computer programs more easily digestible.
+What does that mean? It means that a literate program includes source code as
+well as a natural language explanation of the source code. At this point you
+might be wondering if a literate program is just a program with lots of
+comments. It&rsquo;s not. In a literate program, you might also have links, images,
+nicely rendered mathematical formulas, and so on. Tools for literate programming
+should make it easy to fiddle with the source code and execute it. It might be
+easier to show than to tell.
+</p>
+</div>
+</div>
 
-<p class="center-perfect">
-My name is Liam. I sometimes make computers do what I want them to do.
+<div id="outline-container-orga430484" class="outline-2">
+<h2 id="orga430484">Example</h2>
+<div class="outline-text-2" id="text-orga430484">
+<p>
+In this example, we use <a href="https://en.wikipedia.org/wiki/Euler_characteristic">Euler&rsquo;s Polyhedron Formula</a> to get the number of edges of
+a cube. (A cube has 8 vertices, 12 edges, and 6 faces.)
 </p>
 
-<div id="outline-container-org5184168" class="outline-2">
-<h2 id="org5184168">Brief Intros</h2>
-<div class="outline-text-2" id="text-org5184168">
-<ul class="org-ul">
-<li><a href="./intros/literate-programming.html">Literate Programming</a></li>
-</ul>
+
+<div id="orgfc0a5e1" class="figure">
+<p><img src="../images/cube.jpeg" alt="cube.jpeg" />
+</p>
+</div>
+
+<p>
+Euler&rsquo;s Polyhedron Formula is \( V - E + F = 2. \) The \( V \) denotes the
+number of vertices, the \( E \) denotes the number of edges, and the \( F \)
+denotes the number of faces of a convex ployhedron. In the following program we
+rearrange Euler&rsquo;s Polyhedron Formula to solve for \( E. \) The top function
+returns \( E = V + F - 2. \) The bottom function calls the top function with \(
+6 \) and \( 8 \) as parameters.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-cpp"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">&lt;iostream&gt;</span>
+
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">getNumberOfEdges</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">vertices</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">faces</span>) {
+    <span style="color: #51afef;">return</span> vertices + faces - <span style="color: #da8548; font-weight: bold;">2</span>;
+}
+
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>() {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">edgesOfCube</span> = getNumberOfEdges(<span style="color: #da8548; font-weight: bold;">8</span>, <span style="color: #da8548; font-weight: bold;">6</span>);
+    <span style="color: #a9a1e1;">std</span>::cout &lt;&lt; edgesOfCube &lt;&lt; <span style="color: #a9a1e1;">std</span>::endl;
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4af672b" class="outline-2">
+<h2 id="org4af672b">My Favorite Tools for Literate Programming</h2>
+<div class="outline-text-2" id="text-org4af672b">
+<p>
+There are many tools for literate programming. Two of my favorites are <a href="https://orgmode.org/">Emacs
+Org-mode</a> and <a href="https://rmarkdown.rstudio.com/">R Markdown</a>. I actually made this webpage using Org-mode. It&rsquo;s
+powerful. I haven&rsquo;t scratched its surface. As of this writing, it supports 42
+programming languages. R Markdown only works with R, Python, and SQL as of this
+writing, but it has some neat export options.
+</p>
+
+<hr>
+<footer>
+<a href="../index.html" class="center-perfect">Liam's Homepage</a>
+</footer>
 </div>
 </div>
 </div>

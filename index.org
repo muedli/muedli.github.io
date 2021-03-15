@@ -1,0 +1,21 @@
+#+HTML_HEAD: <link href="./styles/org.css" rel="stylesheet">
+#+OPTIONS: html-postamble:nil num:nil title:nil toc:nil
+#+TITLE: Liam's Homepage
+
+#+BEGIN_EXPORT html
+<img class="center-image liam" src="./images/liam.png" alt="Photo of Liam.">
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<h1 class="center-perfect">Hello.</h1>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<p class="center-perfect">
+My name is Liam. I sometimes make computers do what I want them to do.
+</p>
+#+END_EXPORT
+
+* Brief Intros
+
++ [[./intros/literate-programming.html][Literate Programming]]
